@@ -16,7 +16,8 @@ model_file = './log/epoch_0.883.pth'
 model = torch.load(model_file)['model_state_dict'].cuda().eval()  
 
 test_path = data_root + 'modelnet40_test.txt'
-test_files = cat = [line.rstrip() for line in open(test_path)]
+test_files = [line.rstrip() for line in open(test_path)]
+set_trace()
 
 # 加载带预测点云数据
 point_file = data_root + 'airplane/airplane_0004.txt'
